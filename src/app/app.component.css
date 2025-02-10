@@ -1,0 +1,133 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+header {
+    background-color: #C8102E;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    margin: 0;
+}
+.subtitle {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    
+}
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.card {
+    background-color: white;
+    border: 2px solid #C8102E;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.menu-title, .chat-title {
+    font-family: 'Oswald', sans-serif;
+    color: #C8102E;
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+.menu-item {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+.menu-item:last-child {
+    border-bottom: none;
+}
+.menu-item-name {
+    font-weight: bold;
+    color: #C8102E;
+}
+.menu-item-price {
+    float: right;
+    color: #C8102E;
+}
+.menu-item-description {
+    margin-top: 0.5rem;
+    color: #666;
+}
+.chat-messages {
+    height: 300px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.message {
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    max-width: 80%;
+}
+.user-message {
+    background-color: #C8102E;
+    color: white;
+    margin-left: auto;
+}
+.ai-message {
+    background-color: #e0e0e0;
+    color: black;
+}
+.chat-input {
+    display: flex;
+}
+.chat-input input {
+    flex-grow: 1;
+    padding: 0.5rem;
+    border: 2px solid #C8102E;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+}
+.chat-input button {
+    background-color: #C8102E;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.chat-input button:hover {
+    background-color: var(#F2A900);
+}
+.quick-menu-button {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: var(#F2A900);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.quick-menu-button:hover {
+    background-color: #C8102E;
+}
