@@ -46,13 +46,20 @@
 
             <div class="card">
                 <h2 class="chat-title">AI Assistant</h2>
-                <div class="chat-messages">
-                    <div class="message ai-message">Welcome to In-N-Out Burger! How can I assist you today?</div>
-                    <!-- Somehow integrate python backend to work at this part -->
+                <div class="chat-messages" #chatMessages>
+                    <div class="message" *ngFor="let message of messages" [ngClass]="{'ai-message': message.role === 'assistant', 'user-message': message.role === 'user'}">
+                        {{ message.content }}
+                    </div>
                 </div>
                 <div class="chat-input">
-                    <input type="text" placeholder="Type your order or question...">
-                    <button>Send</button>
+                    <input type="text" 
+                           [(ngModel)]="userInput" 
+                           (keyup.enter)="sendMessage()"
+                           placeholder="Type your order or question...">
+                    <button (click)="sendMessage()" [disabled]="isLoading">
+                        <span *ngIf="!isLoading">Send</span>
+                        <span *ngIf="isLoading">...</span>
+                    </button>
                 </div>
             </div>
         </div>
