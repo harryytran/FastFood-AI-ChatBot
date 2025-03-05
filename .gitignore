@@ -41,3 +41,32 @@ testem.log
 .DS_Store
 Thumbs.db
 /backend/node_modules/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+.venv/
+.env
+
+# Remove Node.js backend specific ignore since we're using Python now
+/backend/node_modules/
